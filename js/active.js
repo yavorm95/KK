@@ -21,7 +21,7 @@ var likes = document.getElementsByClassName("likes")[0];
 
 window.onload = function(){
 if(w < 993){
-    sidebar.style.height = "110vh";
+    sidebar.style.height = "90vh";
     likes.style.display = "block";
 }}
 
