@@ -16,14 +16,15 @@ function topFunction() {
 
 //Sidebar height and likes position
 var w = window.innerWidth;
-var sidebar = document.getElementsByClassName("sidebar")[0];
+var h = window.innerHeight;
+var sidebar = document.getElementsByClassName("page-links")[0];
 var likes = document.getElementsByClassName("likes")[0];
-
 window.onload = function(){
-if(w < 993){
-    sidebar.style.height = "80vh";
-    likes.style.display = "block";
-}}
+    if(w < 993){
+        sidebar.style.height = "230px";
+        likes.style.display = "block";
+    }
+}
 
 
 //Twitter

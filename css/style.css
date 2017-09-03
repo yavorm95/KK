@@ -1,61 +1,3 @@
-/* Photos */
-.carousel-inner > .item > img,
-.carousel-inner > .item > a > img {
-    margin: auto;
-    display: block;
-    width:auto; 
-    height: 400px;
-}
-
-
-/* Body */
-body {
-    background-color: darkgray;
-}
-footer {
-    margin-top: 20px;
-    background-color: dimgrey;
-    height: 10%;
-    text-align: center;
-}
-.page {
-    background-color: white;
-    padding: 5px 5px 5px 5px;
-}
-
-/* Sidebar */
-.sidebar {
-    height: 250vh;
-    padding: 0px 0px 0px 0px;
-    background: -webkit-linear-gradient(top,  #262626 ,  transparent);
-    background: linear-gradient(to bottom,  #262626 ,  transparent);
-}
-.logo {
-    background-color: white;
-    width: 100%;        
-    text-align: center;
-}
-#link {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 15px;
-}
-#what {
-    padding: 10px 15px 10px 15px;
-    width: 100%;
-}
-
-/* Likes */
-.likes {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-}
-
 /* Map and QR */
 iframe {
     width: 100%;
@@ -80,11 +22,19 @@ iframe {
     height: 100%;
 }
 
-.imagen {
-    display: block;
+/* Photos */
+.imagen,
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
     margin: auto;
-    width:auto; 
-    height:400px;
+    display: block;
+    width:auto;
+    min-height: 200px;
+    max-height: 400px;
+}
+
+.parts{
+    min-height: 600px;
 }
 
 /* Bounce To Right */
@@ -148,4 +98,55 @@ iframe {
 
 #myBtn:hover {
     background-color: #555; /* Add a dark-grey background on hover */
+}
+
+/* Likes */
+.likes {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+/* Body */
+body {
+    background-color: darkgray;
+}
+footer {
+    margin-top: 20px;
+    background-color: dimgrey;
+    height: 10%;
+    text-align: center;
+}
+.page {
+    background-color: white;
+    padding: 5px 5px 5px 5px;
+}
+
+/* Sidebar */
+.sidebar {
+    padding: 0px 0px 0px 0px;
+}
+.page-links{
+    height: 800px;
+    margin-top: -20px;
+    background: -webkit-linear-gradient(top,  #262626 ,  transparent);
+    background: -webkit-linear-gradient(left,  #262626 ,  transparent);
+    background: linear-gradient(to bottom,  #262626 ,  transparent);}
+.logo {
+    background-color: white;
+    width: 100%;        
+    text-align: center;
+    height: 280px;
+}
+#link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+}
+#what {
+    padding: 10px 15px 10px 15px;
+    width: 100%;
 }
