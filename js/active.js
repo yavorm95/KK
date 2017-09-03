@@ -14,13 +14,15 @@ function topFunction() {
     document.documentElement.scrollTop = 0; // IE & Firefox
 }
 
-//Sidebar height
+//Sidebar height and likes position
 var w = window.innerWidth;
 var sidebar = document.getElementsByClassName("sidebar")[0];
+var likes = document.getElementsByClassName("likes")[0];
 
 window.onload = function(){
 if(w < 993){
     sidebar.style.height = "80vh";
+    likes.style.display = "block";
 }}
 
 
