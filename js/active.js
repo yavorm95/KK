@@ -26,7 +26,6 @@ window.onload = function(){
     }
 }
 
-
 //Twitter
 window.twttr = (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0],
