@@ -1,0 +1,102 @@
+<?php 
+if(isset($_POST['submit'])){
+    $to = "yavormihalski@gmail.com"; 
+    $from = $_POST['email'];
+    $first_name = $_POST['first_name'];
+    $last_name = $_POST['last_name'];
+    $subject = "Form submission";
+    $subject2 = "Copy of your form submission";
+    $message = $first_name . " " . $last_name . " wrote the following:" . "\n\n" . $_POST['message'];
+    $message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
+
+    $headers = "From:" . $from;
+    $headers2 = "From:" . $to;
+    mail($to,$subject,$message,$headers);
+    mail($from,$subject2,$message2,$headers2);
+    echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
+    }
+?>
+<html lang="en">
+<head>
+    <title>Kardona-Kreacions</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/active.js"></script>
+    <link rel="shortcut icon" href="./img/NoMires/e8cb68.png" style="">
+</head>
+<body>
+<!--Up-->
+   <button onclick="topFunction()" id="myBtn" title="Go to top">Arriba</button>
+<!-- Menu -->
+    <div class="col-md-2 col-sm-12 col-xs-12 sidebar" >
+       <div class="logo">
+           <img src="img/NoMires/e8cb68.png" alt="Logo" id="logo"><br>
+       </div><br>
+        
+        <div id="what"><a href="index.html" id="link">Inicio</a><br></div><br>
+        
+        <div id="what"><a href="decoracion.html" id="link">Decoración</a><br></div><br>
+        
+        <div id="what"><a href="interiorismo.html" id="link">Interiorismo</a><br></div><br>
+        
+        <div id="what"><a href="construccion.html" id="link">Construcción</a><br></div><br>
+        
+        <div id="what"><a href="#" id="link">Contacto</a><br></div>
+    </div>
+   
+<!-- Content -->
+    <div class="col-md-8 col-md-offset-1 col-sm-12 col-xs-12">
+        <div class="page">
+           <div class="likes">
+<!-- Twitter -->
+                <a class="twitter-follow-button" href="https://twitter.com/kardonakreacion?lang=en"></a><br>
+<!-- Facebook -->
+                <div class="fb-like" data-href="https://www.facebook.com/Kardona-Kreacions-336502429775080/" data-width="50" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
+            </div>
+<!--Form-->
+            <div class="Contacto">
+                <h2>Contacto</h2>
+
+                <p>Aqui le facilitamos un formulario para poder resolver sus dudas. Si lo prefiere también puede contactar con nosotros a través de:</p>
+                <p><b>Teléfono o fax: </b>971 42 94 28</p>
+                <p><b>E-mail: </b>kardona-kreacions@hotmail.com</p>
+                <h2>Formulario</h2>
+                <form method="POST" name="contactform" action="email.php" >
+                    <input type="text" name="name" placeholder="Nombre" style="width:100%"> <br>
+                    <input type="text" name="email" placeholder="Correo" style="width:100%"> <br>
+                    <input type="text" name="phone" placeholder="Teléfono" style="width:100%"> <br>
+                    <textarea name="message" placeholder="Mensaje" rows="3" style="width:100%"></textarea> <br>
+                    <input type="submit" value="Submit"><br>
+                </form>
+                <hr>
+    <!--Mapa-->
+                <h2>Estamos Aquí</h2>
+
+                <iframe
+                width="600"
+                height="450"
+                frameborder="0" style="border:0"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDFB0rKlsypn0EYYry43XMJWOBW2dfu1Y0&q=Kardona+kreacions,casa+blanca" allowfullscreen>
+                </iframe><hr>
+    <!--QR-->
+                <h3>Escanée el codigo para obtener nuestra ubicación.</h3>
+                <div class="qr">
+                    <img src="./img/NoMires/qrCode.jpg" alt="QRcode" class="qrcode">                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+   
+<!--Footer-->
+   <footer class="col-md-12 col-sm-12 col-xs-12">
+            <br><p><b>Kardona Kreacions  </b>Carretera de Manacor Km 8 Salida 7 · Palma de Mallorca · Teléfono: 971 42 94 28</p>
+            <p>Página web realizada por Yavor Denislavov Mihalski para uso único y exclusivo de Kardona Kreacions - copyright 2017</p>
+    </footer>
+   
+</body>
+</html>

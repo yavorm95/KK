@@ -1,0 +1,152 @@
+/* Photos */
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    margin: auto;
+    display: block;
+    width:auto; 
+    height: 400px;
+}
+
+
+/* Body */
+body {
+    background-color: darkgray;
+}
+footer {
+    margin-top: 20px;
+    background-color: dimgrey;
+    height: 10%;
+    text-align: center;
+}
+.page {
+    background-color: white;
+    padding: 5px 5px 5px 5px;
+}
+
+/* Sidebar */
+.sidebar {
+    height: 250vh;
+    padding: 0px 0px 0px 0px;
+    background: -webkit-linear-gradient(top,  #262626 ,  transparent);
+    background: linear-gradient(to bottom,  #262626 ,  transparent);
+}
+.logo {
+    background-color: white;
+    width: 100%;        
+    text-align: center;
+}
+#link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    padding-right: 200px;
+}
+#what {
+    padding: 10px 15px 10px 15px;
+    width: 100%;
+}
+
+/* Likes */
+.likes {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+/* Map and QR */
+iframe {
+    width: 100%;
+    height: 50%;
+}
+
+.qr {
+    position: relative;
+    width: 50%; 
+    margin: 0 auto;
+}
+
+.qr:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+.qrcode {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.imagen {
+    display: block;
+    margin: auto;
+    width:auto; 
+    height:400px;
+}
+
+/* Bounce To Right */
+#what {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+#what:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #EFCA53;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transition-property: transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+#what:hover:before, #what:focus:before, #what:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+
+/* Top botton */
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #EFCA53; /* Set a background color */
+    color: white; /* Text color */
+    cursor: alias; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+}
+
+#myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+}
