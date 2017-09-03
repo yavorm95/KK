@@ -20,9 +20,9 @@ var h = window.innerHeight;
 var sidebar = document.getElementsByClassName("page-links")[0];
 var likes = document.getElementsByClassName("likes")[0];
 window.onload = function(){
-    if(w < 993){
-        sidebar.style.height = "230px";
-        likes.style.display = "block";
+    if(w > 993){
+        sidebar.style.height = "800px";
+        likes.style.display = "flex";
     }
 }
 
